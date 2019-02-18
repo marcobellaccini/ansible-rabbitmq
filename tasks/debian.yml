@@ -34,7 +34,7 @@
 
 - name: debian | add Rabbitmq erlang repo
   apt_repository:
-    repo: deb https://dl.bintray.com/rabbitmq-erlang/debian {{ ansible_distribution_release }} erlang
+    repo: "deb https://dl.bintray.com/rabbitmq-erlang/debian {{ ansible_distribution_release }} erlang"
     state: present
   become: true
   when: rabbitmq_debian_erlang_from_rabbit
